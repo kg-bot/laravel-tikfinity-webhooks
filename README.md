@@ -1,9 +1,9 @@
-[![Latest Stable Version](https://poser.pugx.org/kg-bot/tikfinity-webhooks/v/stable)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
-[![Total Downloads](https://poser.pugx.org/kg-bot/tikfinity-webhooks/downloads)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
-[![Latest Unstable Version](https://poser.pugx.org/kg-bot/tikfinity-webhooks/v/unstable)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
-[![License](https://poser.pugx.org/kg-bot/tikfinity-webhooks/license)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
-[![Monthly Downloads](https://poser.pugx.org/kg-bot/tikfinity-webhooks/d/monthly)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
-[![Daily Downloads](https://poser.pugx.org/kg-bot/tikfinity-webhooks/d/daily)](https://packagist.org/packages/kg-bot/tikfinity-webhooks)
+[![Latest Stable Version](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/v/stable)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
+[![Total Downloads](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/downloads)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
+[![Latest Unstable Version](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/v/unstable)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
+[![License](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/license)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
+[![Monthly Downloads](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/d/monthly)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
+[![Daily Downloads](https://poser.pugx.org/kg-bot/laravel-tikfinity-webhooks/d/daily)](https://packagist.org/packages/kg-bot/laravel-tikfinity-webhooks)
 
 
 <a href="https://www.buymeacoffee.com/KgBot"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=KgBot&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
@@ -16,7 +16,7 @@ This package provides a set of webhooks for TikFinity, allowing you to easily in
 You can install the package via Composer:
 
 ```bash
-composer require kg-bot/tikfinity-webhooks
+composer require kg-bot/laravel-tikfinity-webhooks
 ```
 ## Configuration
 After installing the package, you need to publish the configuration file:
