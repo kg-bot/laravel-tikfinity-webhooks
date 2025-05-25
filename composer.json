@@ -1,0 +1,63 @@
+{
+    "name": "kg-bot/laravel-tikfinity-webhooks",
+    "description": "A Laravel package for TikFinity (TikTok LIVE) webhooks",
+    "require": {
+        "php": "^8.1",
+        "illuminate/collections": "^12.14",
+        "illuminate/http": "^12.14",
+        "illuminate/database": "^12.14"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.3",
+        "pestphp/pest": "^3.8"
+    },
+    "keywords": [
+        "laravel",
+        "tiktok",
+        "live",
+        "webhooks",
+        "tikfinity"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Ninic",
+            "email": "ninicstefan94@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KgBot\\TikFinityWebhooks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KgBot\\TikFinityWebhooks\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KgBot\\TikFinityWebhooks\\TikFinityWebhooksServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "funding": [
+        {
+            "type": "buy-me-a-coffee",
+            "url": "https://rebrand.ly/laravel-tikfinity-webhooks"
+        }
+    ]
+}
