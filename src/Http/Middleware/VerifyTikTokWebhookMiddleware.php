@@ -26,7 +26,7 @@ class VerifyTikTokWebhookMiddleware
          */
         if (
             !app()->environment('local') &&
-            $request->query('token') !== config('tikfinity-webhooks.token')
+            $request->input('token') !== config('tikfinity-webhooks.token')
         ) {
 
             throw new UnauthorizedException;
