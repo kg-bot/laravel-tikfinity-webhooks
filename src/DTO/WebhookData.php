@@ -53,8 +53,6 @@ class WebhookData
 {
     private static ?Closure $createTikTokProfileUsing = null;
 
-    const EVENT_GIFT = 'TikTok Gift Webhook';
-
     public function __construct(private readonly Request $request)
     {
     }
@@ -79,6 +77,11 @@ class WebhookData
         return (int) $this->request->input('userId');
     }
 
+    public function avatarUrl(): ?string
+    {
+        return $this->request->input('avatarUrl');
+    }
+
     public function event(): ?string
     {
         return $this->request->input('content');
@@ -86,12 +89,37 @@ class WebhookData
 
     public function isGiftEvent(): bool
     {
-        return $this->request->input('content') === self::EVENT_GIFT;
+        return $this->request->input('giftId') !== null;
+    }
+
+    public function giftId(): ?int
+    {
+        return $this->request->input('giftId');
+    }
+
+    public function giftName(): ?string
+    {
+        return $this->request->input('giftName');
+    }
+
+    public function repeatCount(): ?int
+    {
+        return $this->request->input('repeatCount');
     }
 
     public static function createProfileUsing(Closure $closure): void
     {
         self::$createTikTokProfileUsing = $closure;
+    }
+
+    public function coins(): int
+    {
+        return (int) $this->request->input('coins', 0);
+    }
+
+    public function comment(): ?string
+    {
+        return $this->request->input('commandParams');
     }
 
     public function user(): ?TikTokProfileContract
@@ -108,12 +136,17 @@ class WebhookData
             ])->refresh();
     }
 
-    public function __get(string $name): mixed
+    public function request(): Request
     {
-        if(method_exists($this, $name)) {
-            return $this->$name();
+        return $this->request;
+    }
+
+    public function __get(string $key): mixed
+    {
+        if(method_exists($this, $key)) {
+            return $this->$key();
         }
 
-        return $this->request->input("data.$name");
+        return $this->request->input($key);
     }
 }
