@@ -13,6 +13,6 @@ class GiftController extends Controller
     {
         Pipeline::send($webhookData)
             ->through(config('tikfinity-webhooks.pipes.gift', []))
-            ->then(fn() => response('OK'));
+            ->thenReturn();
     }
 }

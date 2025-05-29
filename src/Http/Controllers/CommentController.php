@@ -12,6 +12,6 @@ class CommentController extends Controller
     {
         Pipeline::send($webhookData)
             ->through(config('tikfinity-webhooks.pipes.comment', []))
-            ->then(fn() => response('OK'));
+            ->thenReturn();
     }
 }
